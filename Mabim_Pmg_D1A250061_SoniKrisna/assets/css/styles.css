@@ -1,0 +1,274 @@
+/* ============================================
+   RESET JEUNG DASAR STYLING
+   ============================================ */
+/* Reset sadaya margin jeung padding default ti browser */
+* {
+    margin: 0;
+    padding: 0;
+    /* Box-sizing border-box sangkan padding teu mangaruhan width */
+    box-sizing: border-box;
+    /* Font family default pikeun sakabeh halaman */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling pikeun body halaman */
+body {
+    /* Background gradient biru ka sian */
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    /* Panghandapna jangkungna 100% viewport */
+    min-height: 100vh;
+    /* Flexbox pikeun ngatur eusi di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Padding pikeun responsif di alat-alat leutik */
+    padding: 20px;
+}
+
+/* ============================================
+   WADAH LOGIN
+   ============================================ */
+/* Wadah utama pikeun formulir login */
+.login-class {
+    /* Background bodas kalawan transparansi */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Border radius pikeun sudut melengkung */
+    border-radius: 20px;
+    /* Shadow pikeun efek jero */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    /* Lebar fleksibel kalawan maksimum 420px */
+    width: 100%;
+    max-width: 420px;
+    /* Padding di jero wadah */
+    padding: 40px 35px;
+    /* Position relative pikeun elemen pseudo */
+    position: relative;
+    /* Overflow hidden pikeun elemen pseudo */
+    overflow: hidden;
+}
+
+/* ============================================
+   EFEK HIASAN DI LUHUR WADAH
+   ============================================ */
+/* Garis hiasan di bagian luhur wadah */
+.login-class::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    /* Gradient nu sarua jeung background body */
+    background: linear-gradient(to right, #1a2980, #26d0ce);
+}
+
+/* ============================================
+   STYLING PIKAN JUDUL
+   ============================================ */
+/* Styling pikeun judul "LOGIN" */
+.login-class h2 {
+    /* Warna tulisan biru poek */
+    color: #1a2980;
+    /* Tulisan di tengah */
+    text-align: center;
+    /* Margin handap pikeun jarak jeung formulir */
+    margin-bottom: 35px;
+    /* Ukuran font nu gedé */
+    font-size: 2.2rem;
+    /* Ketebalan font bold */
+    font-weight: 700;
+    /* Spasi antara hurup */
+    letter-spacing: 1px;
+    /* Position relative pikeun elemen pseudo */
+    position: relative;
+    /* Padding handap pikeun garis hiasan */
+    padding-bottom: 15px;
+}
+
+/* Garis hiasan di handapeun judul */
+.login-class h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* Posisi tengah horizontal */
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    /* Gradient pikeun garis */
+    background: linear-gradient(to right, #1a2980, #26d0ce);
+    border-radius: 2px;
+}
+
+/* ============================================
+   STYLING PIKAN FORMULIR
+   ============================================ */
+/* Wadah formulir */
+.login-class form {
+    /* Flexbox kalawan arah kolom */
+    display: flex;
+    flex-direction: column;
+    /* Gap pikeun jarak antara elemen formulir */
+    gap: 25px;
+}
+
+/* ============================================
+   STYLING PIKAN LABEL
+   ============================================ */
+/* Styling pikeun label username jeung password */
+.login-class label {
+    /* Warna tulisan abu poek */
+    color: #333;
+    /* Font weight semi-bold */
+    font-weight: 600;
+    /* Ukuran font standar */
+    font-size: 1rem;
+    /* Margin handap pikeun jarak jeung input */
+    margin-bottom: 8px;
+    /* Display block sangkan label aya di baris misah */
+    display: block;
+    /* Saeutik letter spacing pikeun bacaan */
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   STYLING PIKAN INPUT TEXT JEUNG PASSWORD
+   ============================================ */
+/* Styling pikeun input field */
+.login-class input[type="text"],
+.login-class input[type="password"] {
+    /* Lebar pinuh wadah */
+    width: 100%;
+    /* Padding nu nyaman pikeun input */
+    padding: 16px 20px;
+    /* Border kalawan warna abu ngora */
+    border: 2px solid #e0e0e0;
+    /* Border radius melengkung */
+    border-radius: 10px;
+    /* Ukuran font */
+    font-size: 1rem;
+    /* Transisi pikeun efek hover/focus */
+    transition: all 0.3s ease;
+    /* Background warna abu pisan ngora */
+    background-color: #f9f9f9;
+    /* Warna tulisan input */
+    color: #333;
+}
+
+/* Styling pikeun input field waktu focus */
+.login-class input[type="text"]:focus,
+.login-class input[type="password"]:focus {
+    /* Hilangkeun outline default */
+    outline: none;
+    /* Robah border color waktu focus */
+    border-color: #1a2980;
+    /* Background bodas waktu focus */
+    background-color: #fff;
+    /* Shadow biru transparan waktu focus */
+    box-shadow: 0 0 0 3px rgba(26, 41, 128, 0.1);
+}
+
+/* Styling pikeun placeholder text */
+.login-class input[type="text"]::placeholder,
+.login-class input[type="password"]::placeholder {
+    /* Warna abu pikeun placeholder */
+    color: #999;
+}
+
+/* ============================================
+   STYLING PIKAN TOMBOL SUBMIT
+   ============================================ */
+/* Styling pikeun tombol login */
+.login-class input[type="submit"] {
+    /* Background gradient pikeun tombol */
+    background: linear-gradient(to right, #1a2980, #26d0ce);
+    /* Warna tulisan bodas */
+    color: white;
+    /* Hilangkeun border default */
+    border: none;
+    /* Border radius melengkung */
+    border-radius: 10px;
+    /* Padding nu cukup gedé */
+    padding: 18px;
+    /* Ukuran font rada gedé */
+    font-size: 1.1rem;
+    /* Font weight bold */
+    font-weight: 700;
+    /* Cursor pointer waktu hover */
+    cursor: pointer;
+    /* Transisi pikeun efek hover */
+    transition: all 0.3s ease;
+    /* Letter spacing pikeun bacaan */
+    letter-spacing: 1px;
+    /* Margin luhur pikeun jarak ti input panungtung */
+    margin-top: 10px;
+    /* Shadow pikeun efek jero */
+    box-shadow: 0 5px 15px rgba(26, 41, 128, 0.2);
+}
+
+/* Efek hover pikeun tombol submit */
+.login-class input[type="submit"]:hover {
+    /* Efek angkat waktu hover */
+    transform: translateY(-3px);
+    /* Shadow leuwih kuat waktu hover */
+    box-shadow: 0 8px 20px rgba(26, 41, 128, 0.3);
+}
+
+/* Efek aktif (waktu diklik) pikeun tombol submit */
+.login-class input[type="submit"]:active {
+    /* Balik deui ka posisi asal waktu diklik */
+    transform: translateY(0);
+}
+
+/* ============================================
+   DESAIN RESPONSIF
+   ============================================ */
+/* Media query pikeun alat-alat kalawan lebar maksimal 480px */
+@media (max-width: 480px) {
+    /* Adjust wadah login pikeun mobile */
+    .login-class {
+        padding: 30px 25px;
+        max-width: 90%;
+    }
+    
+    /* Adjust ukuran judul pikeun mobile */
+    .login-class h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Adjust padding input pikeun mobile */
+    .login-class input[type="text"],
+    .login-class input[type="password"] {
+        padding: 14px 18px;
+    }
+    
+    /* Adjust padding tombol pikeun mobile */
+    .login-class input[type="submit"] {
+        padding: 16px;
+    }
+}
+
+/* ============================================
+   ANIMASI
+   ============================================ */
+/* Keyframes pikeun animasi fade in */
+@keyframes fadeIn {
+    from {
+        /* Mimiti ti transparan */
+        opacity: 0;
+        /* Mimiti ti posisi 20px leuwih handap */
+        transform: translateY(20px);
+    }
+    to {
+        /* Tungtung di opacity pinuh */
+        opacity: 1;
+        /* Balik deui ka posisi normal */
+        transform: translateY(0);
+    }
+}
+
+/* Terapkeun animasi fadeIn ka wadah login */
+.login-class {
+    /* Ngaran animasi */
+    animation: fadeIn 0.8s ease-out;
+}
